@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
   //Reading in first value of arguments
   double result = (double)strtol(argv[1], NULL, 10);
 
-  //Reading in flags 
+  //Reading in flags
   for (int i = 0; i < argc; i++) {
 
     //Addition
@@ -49,6 +49,13 @@ int main(int argc, char *argv[]) {
 
         double arg = (double)strtol(argv[i+1], NULL, 10);
         result = pow(result, 1./arg);
+    }
+    //Modulu only works for integers (int) typecasting required
+    if(strcmp(argv[i],"%")==0){
+
+        int arg = (int)strtol(argv[i+1], NULL, 10);
+        result = (int)result%arg;
+
     }
   }
   printf("\n\n-------------------------\n");
