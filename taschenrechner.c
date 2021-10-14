@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h> //for strtol
 #include <string.h> //for strcmp
@@ -30,7 +29,8 @@ int main(int argc, char *argv[]) {
     if(strcmp(argv[i],"m") == 0) {
 
         double arg = (double)strtol(argv[i+1], NULL, 10);
-        result = result * arg;
+        if(arg != 0)result = result * arg;
+        else printf("\nFehler: Keine Division durch 0!\n");
     }
     //Division
     if(strcmp(argv[i],"d") == 0) {
