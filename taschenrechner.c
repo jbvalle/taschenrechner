@@ -29,14 +29,18 @@ int main(int argc, char *argv[]) {
     if(strcmp(argv[i],"m") == 0) {
 
         double arg = (double)strtol(argv[i+1], NULL, 10);
-        if(arg != 0)result = result * arg;
-        else printf("\nFehler: Keine Division durch 0!\n");
+        result = result * arg;
     }
     //Division
     if(strcmp(argv[i],"d") == 0) {
 
         double arg = (double)strtol(argv[i+1], NULL, 10);
-        result /= arg;
+        if(arg != 0) result /= arg;
+        else{
+           printf("\nFehler: Keine Division durch 0!\n");
+           result = 0;
+           break;
+        }
     }
     //Power
     if(strcmp(argv[i],"pow") == 0) {
@@ -58,8 +62,10 @@ int main(int argc, char *argv[]) {
 
     }
   }
-  printf("\n\n-------------------------\n");
-  printf("\n\t\t%f\n", result);
+  printf("\n _______________________");
+  printf("\n|                       |");
+  printf("\n|\t\t%.2f\t|", result);
+  printf("\n|_______________________|\n\n");
 
   return 0;
 }
