@@ -5,8 +5,8 @@
 
 int main(int argc, char const *argv[]) {
   int letter;
-  char args[10] = "";
-  char command[50] = "taschenrecher ";
+  char args[100] = "";
+  char command[50] = "taschenrechner ";
 
   for (int i = 0; (letter = getchar()) != '\n'; i++) {
     args[i] = letter;
