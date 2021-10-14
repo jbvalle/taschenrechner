@@ -21,12 +21,15 @@ root_of ... wurzel von ..
 
 r ... Modulu
 
+
 Beispiel einer Eingabe:
 
 cmd: main \n
 
 cmd: 23 a 7 m 2 r 2
 
-Info: Die eingabe von Parameter ist auf 100 Zeichen begrenzt
+Special feature:
+* Eingabe von unbegrenzt vielen Parameter
 
-
+Bugs:
+* Assoziativregel -> Vorrangregeln, Klammern werden nicht unterstützt.
