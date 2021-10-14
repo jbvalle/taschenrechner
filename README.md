@@ -23,10 +23,11 @@ r ... Modulu
 
 
 Beispiel einer Eingabe:
+cmd$: make
 
-cmd: main \n
+cmd$: main \n
 
-cmd: 23 a 7 m 2 r 2
+cmd$: 23 a 7 m 2 r 2   //Gleichbedeutend 23 + 7 * 2 % 2
 
 Special feature:
 * Eingabe von unbegrenzt vielen Parameter
