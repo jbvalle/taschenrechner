@@ -16,7 +16,7 @@ OBJF := $(SRCS:%.c=%.o)
 BINS := $(SRCS:%.c=%)
 
 #define the "all" target
-all: $(OBJF) $(BINS)
+all: $(OBJF) $(BINS) cleanobj
 
 #target <- objectfiles
 %: %.o
@@ -24,6 +24,9 @@ all: $(OBJF) $(BINS)
 
 %.o: %.c
 	$(CC) -c $^
+
+cleanobj:
+	rm *.o
 
 #clean target
 clean:
