@@ -1,33 +1,26 @@
-# taschenrechner
+/*
+  John Bryan Valle
+  Programm: taschenrechner
 
-1. Build process:
+  + = addition
+  - = subtraktion
+  * = multiplikatioj
+  / = division
+  ()^x = pow               //bsp: 2 pow 5 = 2^5
+  root_of = xte wurzel von //bsp: 25 root_of 2 = 25^(1/2)
+  % = modulo
 
-cmd: make
--> generiert main und taschenrechner
+  Eingabe: ------------------------------------------------------------
+  1. Build:
+    ~&: make
+  2. Ausführen:
+    ~&: ./main
+  3. Eingabe:
+    ~&: 3 + 3 - 5 pow 5 % 2
+  4. Beenden:
+    ~&: e
+  ---------------------------------------------------------------------*/
 
-2. Eingabemethode:
-
-a ... addition
-
-s ... subtraktion
-
-m ... multiplikation
-
-d ... division
-
-pow ... potenzieren
-
-root_of ... wurzel von ..
-
-r ... Modulu
-
-
-Beispiel einer Eingabe:
-cmd$: make
-
-cmd$: main (bei windows) | ./main (bei linux)
-
-cmd$: 23 a 7 m 2 r 2   //Gleichbedeutend 23 + 7 * 2 % 2
 
 Special feature:
 * Eingabe von unbegrenzt vielen Parameter

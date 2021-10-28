@@ -16,17 +16,20 @@ OBJF := $(SRCS:%.c=%.o)
 BINS := $(SRCS:%.c=%)
 
 #define the "all" target
-all: $(OBJF) $(BINS) cleanobj
+all: SHOW_README $(OBJF) $(BINS) cleanobj
 
 #target <- objectfiles
 %: %.o
-	$(CC) $(CFLAGS) -o $@ $^ $(LFLAGS)
+	@$(CC) $(CFLAGS) -o $@ $^ $(LFLAGS)
 
 %.o: %.c
-	$(CC) -c $^
+	@$(CC) -c $^
+
+SHOW_README:
+	@cat README.md
 
 cleanobj:
-	rm *.o
+	@rm *.o
 
 #clean target
 clean:
